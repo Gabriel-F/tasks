@@ -11,17 +11,21 @@ import {
 } from 'react-native'
 import moment from 'moment'
 import 'moment/locale/pt-br'
-import todayImage from '../../assets/imgs/today.jpg'
 import commonStyles from '../commonStyles'
 import Task from '../components/Task'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import ActionButton from 'react-native-action-button'
 import AddTask from './AddTask'
+import todayImage from '../../assets/imgs/today.jpg'
+import tomorrowImage from '../../assets/imgs/tomorrow.jpg'
+import weekImage from  '../../assets/imgs/week.jpg'
+import monthImage from '../../assets/imgs/month.jpg'
 
 export default class Agenda extends Component {
     state = {
         tasks: [],
         visibleTasks: [],
+        visibleDayTasks: [],
         showDoneTasks: true,
         showAddTask: false,
     }
@@ -46,11 +50,17 @@ export default class Agenda extends Component {
 
     filterTasks = () => {
         let visibleTasks = null
+        let tasks = [...this.state.tasks]
+        let visibleDayTasks = null
+        visibleDayTasks = tasks.filter(task => {
+            console.log(moment(task.estimateAt).diff(moment(), 'days'))
+            return this.props.daysAhead >= moment(task.estimateAt).diff(moment(), 'days')
+        })
         if (this.state.showDoneTasks) {
-            visibleTasks = [...this.state.tasks]
+            visibleTasks = [...visibleDayTasks]
         } else {
             const pending = task => task.doneAt === null
-            visibleTasks = this.state.tasks.filter(pending)
+            visibleTasks = visibleDayTasks.filter(pending)
         }
         this.setState({ visibleTasks })
         AsyncStorage.setItem('tasks', JSON.stringify(this.state.tasks))
@@ -79,21 +89,39 @@ export default class Agenda extends Component {
     }
 
     render() {
+        let image = null
+        switch(this.props.daysAhead){
+            case 0:
+                image = todayImage
+                break
+            case 1:
+                image = tomorrowImage
+                break
+            case 7:
+                image = weekImage
+                break
+            default:
+                image = monthImage
+                break
+        }
         return (
             <View style={styles.container}>
                 <AddTask isVisible={this.state.showAddTask}
                     onSave={this.addTask}
                     onCancel={() => this.setState({ showAddTask: false })} />
-                <ImageBackground source={todayImage}
+                <ImageBackground source={image}
                     style={styles.background}>
                     <View style={styles.iconBar}>
+                        <TouchableOpacity onPress={() => this.props.navigation.openDrawer()}>
+                            <Icon name='bars' size={20} color={commonStyles.colors.secondary}></Icon>
+                        </TouchableOpacity>
                         <TouchableOpacity onPress={this.toggleFilter}>
                             <Icon name={this.state.showDoneTasks ? 'eye' : 'eye-slash'}
                                 size={20} color={commonStyles.colors.secondary} />
                         </TouchableOpacity>
                     </View>
                     <View style={styles.titleBar}>
-                        <Text style={styles.title}>Hoje</Text>
+                        <Text style={styles.title}>{this.props.title}</Text>
                         <Text style={styles.subtitle}>
                             {moment().locale('pt-br').format('ddd, D [de] MMMM')}
                         </Text>
@@ -145,6 +173,6 @@ const styles = StyleSheet.create({
         marginTop: Platform.OS === 'ios' ? 30 : 10,
         marginHorizontal: 20,
         flexDirection: 'row',
-        justifyContent: 'flex-end',
+        justifyContent: 'space-between',
     }
 })
