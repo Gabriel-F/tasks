@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/gabrielfonseca/Desktop/tasks/android/app/build/intermediates/res/merged/debug/drawable-v21/abc_edit_text_material.xml",
+        "source": "/Users/gabrielfonseca/.android/build-cache/474f781ed2db1e042508de4f9fc2f31bfc643ba5/output/res/drawable-v21/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/gabrielfonseca/Desktop/tasks/android/app/build/intermediates/res/merged/debug/drawable-v21/notification_action_background.xml",
+        "source": "/Users/gabrielfonseca/.android/build-cache/69d45637addba020a8fca3fa6fa56a00b84cc8b1/output/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/Users/gabrielfonseca/Desktop/tasks/android/app/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/Users/gabrielfonseca/.android/build-cache/474f781ed2db1e042508de4f9fc2f31bfc643ba5/output/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "/Users/gabrielfonseca/Desktop/tasks/android/app/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/Users/gabrielfonseca/.android/build-cache/474f781ed2db1e042508de4f9fc2f31bfc643ba5/output/res/drawable-v21/abc_btn_colored_material.xml"
+    }
+]

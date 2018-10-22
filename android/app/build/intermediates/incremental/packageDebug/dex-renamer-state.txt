@@ -1,0 +1,4 @@
+#Mon Oct 22 10:10:23 BRT 2018
+base.0=/Users/gabrielfonseca/Desktop/tasks/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+renamed.0=classes.dex
+file.0=/Users/gabrielfonseca/Desktop/tasks/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

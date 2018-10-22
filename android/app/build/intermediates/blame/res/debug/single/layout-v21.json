@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/gabrielfonseca/Desktop/tasks/android/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/Users/gabrielfonseca/.android/build-cache/69d45637addba020a8fca3fa6fa56a00b84cc8b1/output/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/Users/gabrielfonseca/Desktop/tasks/android/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/gabrielfonseca/.android/build-cache/69d45637addba020a8fca3fa6fa56a00b84cc8b1/output/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/gabrielfonseca/Desktop/tasks/android/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/gabrielfonseca/.android/build-cache/69d45637addba020a8fca3fa6fa56a00b84cc8b1/output/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/gabrielfonseca/Desktop/tasks/android/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/gabrielfonseca/.android/build-cache/69d45637addba020a8fca3fa6fa56a00b84cc8b1/output/res/layout-v21/notification_template_custom_big.xml"
+    }
+]

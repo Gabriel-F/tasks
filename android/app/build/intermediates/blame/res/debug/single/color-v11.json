@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/gabrielfonseca/Desktop/tasks/android/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/Users/gabrielfonseca/.android/build-cache/474f781ed2db1e042508de4f9fc2f31bfc643ba5/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/Users/gabrielfonseca/Desktop/tasks/android/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/Users/gabrielfonseca/.android/build-cache/474f781ed2db1e042508de4f9fc2f31bfc643ba5/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    }
+]
